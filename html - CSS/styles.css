@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white : hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+    --Very-light-gray : hsl(0, 0%, 95%);/*(background, headings, buttons)*/
+}
+*{  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    font-family:"Big Shoulders Display", "cursive",;
+    width: 100vw;
+    font-family: 'Lexend Deca', sans-serif;
+    
+}
+
+      
+
+.wrapper{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 800px;
+   
+   
+}
+
+.wrapper .photo{
+    width: 40px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.wrapper h1{
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-left: 38px;
+    margin-bottom: 22px;
+    font-size: 30px;
+    color: var(--Very-light-gray);
+    font-family: "Big Shoulders Display";
+    
+}
+.wrapper p{
+    color:var(--Transparent-white);
+    font-size: 12px;
+    line-height: 23px;
+    margin: 20px 50px;
+    margin-top: 20px;
+    margin-left: 38px;
+    margin-bottom: 22px; 
+}
+.wrapper button{
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 120px;
+    height: 39px;
+    border-radius: 60px;
+    border:white solid 2px;
+    font-size: 12px;
+    font-weight: 600;
+   
+
+
+}
+
+
+.column-left{
+    background: var(--Bright-orange);
+    width: 700px;
+    height: 400px;
+    border-radius: 6px 0 0 6px;  
+}
+.column-center{
+    background: var(--Dark-cyan);
+    width: 700px;
+    height: 400px;
+    
+
+}
+
+.column-right{
+    background: var(--Very-dark-cyan);
+    width: 700px;
+    height: 400px;
+    border-radius: 0px 6px 6px 0;
+}
+
+#firstbutton{
+    color: var(--Bright-orange);
+    
+}
+
+#secondbutton{
+    color: var(--Dark-cyan);
+}
+#thirdbutton{
+    color:var(--Very-dark-cyan);
+}
+#firstbutton:hover{
+    color: white;
+    background: none;
+    
+}
+#secondbutton:hover{
+    color: white;
+    background: none;
+}
+#thirdbutton:hover{
+    color:white;
+    background: none;
+}
+.attribution{
+    font-size: 12px;
+    margin-top: -100px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {   /*breakpoint*/
+    .wrapper, .column-right, .column-center, .column-left {
+      flex-direction: column;
+      width: 250px;
+      height: 800px;
+      transition: 1s;
+      
+      
+    }
+    @media (max-width:600px) {   /*breakpoint*/
+        button{
+         margin-bottom: 45px;
+        }
+    @media (max-width: 600px) {   /*breakpoint*/
+        .wrapper,.column-left {
+          margin-top: 200px;
+          border-radius: 6px 6px 0 0;
+        }
+        @media (max-width:600px) {   /*breakpoint*/
+            .wrapper,.column-right {
+              margin-bottom: 200px;
+              border-radius: 0 0 6px 6px;
+            }
+           
+            @media (max-width:600px) {   /*breakpoint*/
+                .attribution{
+                    display: none;
+                }
